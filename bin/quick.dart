@@ -10,7 +10,7 @@ dynamic main(List args) async {
   String author = args.last;
 
   DateTime now = new DateTime.now();
-  DateTime since = now.subtract(new Duration(days: 30));
+  DateTime since = now.subtract(new Duration(days: 180));
   print("Pulling commits since $since");
   List<String> countStrings = [];
   for (String repoName in repos) {
@@ -22,7 +22,7 @@ dynamic main(List args) async {
   print(countStrings.join(', '));
 }
 
-Future<List<Map>> commitsSince(
+Future<List> commitsSince(
     String repoName, String author, DateTime since) async {
   List commits = [];
   bool haveNext = true;

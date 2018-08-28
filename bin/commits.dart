@@ -6,7 +6,7 @@ import 'package:args/args.dart';
 import 'package:http/http.dart' as http;
 import 'package:perf/config.dart';
 
-dynamic main(List args) async {
+dynamic main(List<String> args) async {
   ArgParser parser = new ArgParser(allowTrailingOptions: true);
   parser.addFlag('cache');
   ArgResults argResults = parser.parse(args);
